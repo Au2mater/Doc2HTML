@@ -65,7 +65,7 @@ The application provides several command-line arguments to customize its behavio
 - `-h, --help`: Displays the help message and exits the program. Use this if you need a quick reminder of the command-line arguments.
 - `--wordfile WORDFILE`: Specifies the path to the Word file that you want to convert to HTML. This is a required argument.
 - `--htmlfile HTMLFILE`: (Optional) Specifies the path to the output HTML file. If this argument is not provided, the HTML file will be created in the same directory as the Word file, and it will have the same name as the Word file but with a .html extension.
-- `--csvfile CSVFILE`: (Optional) Specifies the path to a CSV file that contains data for rendering the Word template. This is useful for mail merge operations where you want to create multiple documents based on a single template but with different data for each document.
+- `--csvfile CSVFILE`: (Optional) Specifies the path to a CSV file that contains data for rendering the Word template. This is useful for mail merge operations where you want to create multiple documents based on a single template but with different data for each document.The CSV file should be comma-separated and encoded in UTF-8.
 - `--outputdir OUTPUTDIR`: (Optional) Specifies the path to the directory where the output HTML files from a template should be saved. If this argument is not provided, the output files will be saved in the same directory as the Word file in an `output` subdirectory. This is only applicable when using a Word template.
 
 Here's an example of how to use these arguments:
