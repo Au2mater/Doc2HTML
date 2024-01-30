@@ -69,6 +69,6 @@ if __name__ == "__main__":
     wordfile = "sample_data/letter_from_Doc.docx"
     # test_word_to_html_1(wordfile)
     # test_word_to_html_2(wordfile)
-    # test_wordtemplate_to_html_1(wordfile)
-    test_wordtemplate_custom_output(wordfile)
-    # teardown()
+    test_wordtemplate_to_html_1(wordfile)
+    # test_wordtemplate_custom_output(wordfile)
+    teardown()

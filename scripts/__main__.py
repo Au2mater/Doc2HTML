@@ -61,7 +61,7 @@ def render_template(template_file: str, csvfile: str, output: str = None):
     """
     render an html file with jinja2 template
     params:
-    template_file: path to html file
+    template_file: path to html template file
     csvfile: path to csv file
     output: (optional) path to output directory. Default to same directory as template
     """
@@ -73,16 +73,12 @@ def render_template(template_file: str, csvfile: str, output: str = None):
     with open(csvfile, "r", encoding="utf-8") as f:
         columns = [c.strip() for c in f.readline().split(",")]
         rows = []
-        for line in f.readlines():
+        for rownum , line in enumerate(f.readlines()):
             row = {}
             for i, cell in enumerate(line.split(",")):
                 row[columns[i]] = cell.strip()
+                row['rownum'] = rownum+1
             rows.append(row)
-
-    # validate that the csv file contains a column named 'rownum'
-    if "rownum" not in columns:
-        raise Exception("CSV file does not contain a column named 'rownum'")
-    print("csv file validated")
 
     # create output directory if it does not exist
     if output == None:
