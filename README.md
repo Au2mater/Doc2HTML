@@ -21,23 +21,25 @@
 
 ## Description
 
-Doc2HTML converts Word documents and templates to HTML format. It uses the `mammoth` library for the conversion and `jinja2` for HTML templating. The application can be run as a standalone zipapp, requiring only Python >= 3.8.5. It is a pure Python application that has no C dependencies, making it highly portable across different systems.
+Doc2HTML converts Word documents and word templates to HTML format. The application can be run as a standalone zipapp, requiring only Python >= 3.8.5 or as an Alteryx Macro, using Alteryx's built-in Python interpreter.
+Doc2HTML is a pure Python application that has no C dependencies, making it highly portable across different systems. It uses the `mammoth` library for the conversion and `jinja2` for HTML templating.
 
 ## Use Cases
 
-Doc2HTML can be used in a variety of scenarios where conversion of Word documents to HTML is required. Here are a few examples:
+Doc2HTML can be used in a variety of scenarios where conversion of Word documents to HTML is required. 
+Maintain the original formatting and styles from the Word document in a format that can be easily viewed in a web browser.
+In Alteryx, it can be used to convert Word documents to formatted reports, which can then be sent using the Email tool.
 
-### Mail Merge
+### Templates
 
-If you have a Word document template for a mail merge, you can use Doc2HTML to convert this template to HTML. You can then programmatically insert the relevant data into the HTML template for each recipient of the mail merge. This allows you to create personalized emails in bulk.
+Doc2HTML can be used to convert a single Word template to multiple HTML files, each with different data. This is useful for mail merge operations where you want to create multiple documents based on a single template but with different data for each document.
 
-### Content Management Systems
+To achieve this, you need to create a CSV file and a Word template. 
+The CSV file should contain the data for each document. The Word template should contain placeholders for the data in the CSV file. The placeholders should be in the format `{{column_name}}`, where `column_name` is the name of the column in the CSV file. The CSV file should have a header row with the column names. The column names should match the placeholders in the Word template.
+See the csv and word template in the sample data for an example.
+Read more about jinja2 templating [here](https://jinja.palletsprojects.com/en/3.0.x/templates/).
 
-If you're working with a content management system (CMS) that accepts HTML input, you can use Doc2HTML to convert Word documents to HTML. This can be useful if your content creators prefer to work in Word, but your CMS requires HTML.
-
-### Web Publishing
-
-If you want to publish Word documents on the web, you can use Doc2HTML to convert them to HTML. This allows you to maintain the original formatting and styles from the Word document in a format that can be easily viewed in a web browser.
+In Alteryx, no csv file is needed, the input data is passed to the macro as a data stream. 
 
 ## Installation
 
