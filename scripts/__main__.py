@@ -42,7 +42,7 @@ def doc2html(input: str, output: str = None):
     """
     with open(input, "rb") as docx_file:
         result = mammoth.convert_to_html(docx_file)
-    if output != None:
+    if output is not None:
         # ensure that output directory exists
         Path(output).parent.mkdir(parents=True, exist_ok=True)
         with open(output, "w", encoding="utf-8") as html_file:
@@ -78,8 +78,8 @@ def render_template(template_file: str, csvfile: str, output: str = None):
             rows.append(row)
     print(rows)
     # create output directory if it does not exist
-    if output == None:
-        output = str(Path(template_file).parent )
+    if output is None:
+        output = str(Path(template_file).parent)
     Path(output).mkdir(parents=True, exist_ok=True)
     print("output directory created")
 
@@ -149,7 +149,7 @@ else:
     htmlfile = None
     csvfile = None
     output = None
-    while wordfile == None:
+    while wordfile is None:
         print("path to wordfile")
         wordfile = input()
         if not validate_word_file(wordfile):
@@ -166,8 +166,8 @@ else:
             csvfile = None
 
 # execute conversion
-if wordfile != None:
-    if csvfile != None:
+if wordfile is not None:
+    if csvfile is not None:
         template_file = doc2html(input=wordfile, output=htmlfile)
         outputdir = render_template(
             template_file=template_file, csvfile=csvfile, output=output

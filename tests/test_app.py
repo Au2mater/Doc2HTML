@@ -1,13 +1,14 @@
 import os
 import pytest
 import shutil
+from pathlib import Path
 
-
-output = "sample_data/output/"
-output2 = "sample_data/output2/"
-csvfile = "sample_data/names.csv"
-html = "sample_data/output/letter_from_Doc.html"
-html2 = "sample_data/output/letter_from_Doc_2.html"
+output = Path("sample_data/output/").resolve()
+output2 = Path("sample_data/output2/").resolve()
+csvfile = Path("sample_data/names.csv").resolve()
+html = Path("sample_data/output/letter_from_Doc.html").resolve()
+html2 = Path("sample_data/output/letter_from_Doc_2.html").resolve()
+main = Path("scripts/__main__.py").resolve()
 
 
 def teardown():
@@ -17,58 +18,54 @@ def teardown():
 
 @pytest.fixture(scope="session", autouse=True)
 def wordfile():
-    wordfile = "sample_data/letter_from_Doc.docx"
-
+    wordfile = Path("sample_data").resolve() / "letter_from_Doc.docx"
     yield wordfile
 
     teardown()
 
 
 def test_word_to_html_1(wordfile):
-    command = f"python scripts\\__main__.py --wordfile {wordfile}"
+    command = f'python "{main}" --wordfile "{wordfile}"'
     os.system(command)
     # check if the output html file exists
     assert os.path.exists(html)
 
 
 def test_word_to_html_2(wordfile):
-    command = f"python scripts\\__main__.py --wordfile {wordfile} --htmlfile {html2}"
+    command = f'python "{main}" --wordfile "{wordfile}" --htmlfile "{html2}"'
     os.system(command)
     # check if the output html file exists
     assert os.path.exists(html2)
 
 
 def test_wordtemplate_to_html_1(wordfile):
-    command = f"python scripts\\__main__.py --wordfile {wordfile} --csvfile {csvfile}"
+    command = f'python "{main}" --wordfile "{wordfile}" --csvfile "{csvfile}"'
     os.system(command)
     # check if word template was converted to html template
     assert os.path.exists(html)
     # check if the two html files exists in output/output
     rendered_htmlfiles = [
-        os.path.join(output, f)
-        for f in os.listdir(output)
-        if "htm" in f
+        f for f in output.iterdir() if f.is_file() and "htm" in f.suffix
     ]
-    assert len(rendered_htmlfiles)-1 == 2
+    assert len(rendered_htmlfiles) - 1 == 2
 
 
 def test_wordtemplate_custom_output(wordfile):
-    output2 = "sample_data/output2"
-    command = f"python scripts\\__main__.py --wordfile {wordfile} --csvfile {csvfile} --outputdir {output2}"
+    command = f'python "{main}" --wordfile "{wordfile}" --csvfile "{csvfile}" --outputdir "{output2}"'
     os.system(command)
     # check if word template was converted to html template
     assert os.path.exists(html)
     # check if the two html files exists in output2
     rendered_htmlfiles = [
-        os.path.join(output2, f) for f in os.listdir(output2) if "htm" in f
+        f for f in output2.iterdir() if f.is_file() and "htm" in f.suffix
     ]
     assert len(rendered_htmlfiles) == 2
 
 
 if __name__ == "__main__":
-    wordfile = "sample_data/letter_from_Doc.docx"
-    # test_word_to_html_1(wordfile)
-    # test_word_to_html_2(wordfile)
+    wordfile = Path("sample_data").resolve() / "letter_from_Doc.docx"
+    test_word_to_html_1(wordfile)
+    test_word_to_html_2(wordfile)
     test_wordtemplate_to_html_1(wordfile)
-    # test_wordtemplate_custom_output(wordfile)
+    test_wordtemplate_custom_output(wordfile)
     teardown()
