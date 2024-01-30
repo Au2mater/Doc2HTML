@@ -1,0 +1,1573 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="66" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="2" />
+          <Fields>
+            <Field name="Script" />
+          </Fields>
+          <Data>
+            <r>
+              <c>"__python3__" "__python_module__" --wordfile "%Question.WordFile%" --htmlfile "%Engine.TempFilePath%sample.html" --csvfile "context_file"</c>
+            </r>
+            <r>
+              <c>exit</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Script" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
+        <Position x="378" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldFind>Script</FieldFind>
+          <FieldSearch>find</FieldSearch>
+          <ReplaceFoundField>replace</ReplaceFoundField>
+          <FindMode>FindAny</FindMode>
+          <NoCase value="False" />
+          <MatchWholeWord value="False" />
+          <ReplaceMode>Replace</ReplaceMode>
+          <ReplaceMultipleFound value="True" />
+          <ReplaceAppendFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Script" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="66" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="2" />
+          <Fields>
+            <Field name="Installdir" />
+            <Field name="find" />
+            <Field name="replace" />
+          </Fields>
+          <Data>
+            <r>
+              <c>C:\Program Files\Alteryx\bin\Miniconda3</c>
+              <c>__python3__</c>
+              <c>C:\Program Files\Alteryx\bin\Miniconda3\python</c>
+            </r>
+            <r>
+              <c>D:\Program Files\Alteryx\bin\Miniconda3</c>
+              <c>__python3__</c>
+              <c>D:\Program Files\Alteryx\bin\Miniconda3\python</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Installdir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="find" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="replace" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="162" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>FileExists([Installdir])</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>FileExists([Installdir])</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Installdir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="find" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="replace" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Installdir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="find" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="replace" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings>
+        <Position x="234" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Ranges">-1</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Installdir" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="find" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="replace" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="SelectRecords.yxmc" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.FileBrowse.FileBrowse">
+        <Position x="54" y="54" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name>WordFile</Name>
+          <AnnotationText>File Browse (10)</AnnotationText>
+          <DefaultAnnotationText>WordFile</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="894" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="Script" action="Concat" rename="Concat_Script">
+              <Concat_Start />
+              <Separator><![CDATA[ && ]]></Separator>
+              <Concat_End />
+            </SummarizeField>
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Concat_Script" size="2147483647" source="Summarize: Concat - Script" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1590" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Table" selected="True" rename="__HTML__" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="__HTML__" size="1073741823" source="Report:Table:Basic:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1182" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="'&lt;htmlpassthrough&gt;'&#xA;+'&lt;![CDATA[&lt;html&gt;'&#xA;//&lt;head&gt; &lt;meta charset=&quot;utf-8&quot; /&gt; &lt;/head&gt;&#xA;//&lt;body&gt;'&#xA;+[__HTML__]&#xA;//'&lt;/body&gt;&#xA;+'&lt;/html&gt;]]&gt;'&#xA;+'&lt;/htmlpassthrough&gt;'" field="__HTML__" size="50000" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>__HTML__ = '&lt;htmlpassthrough&gt;'
++'&lt;![CDATA[&lt;html&gt;'
+//&lt;head&gt; &lt;meta charset="utf-8"...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="__HTML__" size="50000" source="Formula: '&lt;htmlpassthrough&gt;'&#xA;+'&lt;![CDATA[&lt;html&gt;'&#xA;//&lt;head&gt; &lt;meta charset=&quot;utf-8&quot; /&gt; &lt;/head&gt;&#xA;//&lt;body&gt;'&#xA;+[__HTML__]&#xA;//'&lt;/body&gt;&#xA;+'&lt;/html&gt;]]&gt;'&#xA;+'&lt;/htmlpassthrough&gt;'" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1086" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Field_1" selected="True" rename="__HTML__" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="__HTML__" size="50000" source="File: C:\Users\AHMABA\AppData\Local\Temp\Engine_8456_37f6cacd379f754ebdcc829dffb436c5_\sample.html" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="PortfolioPluginsGui.ComposerTable.PortfolioComposerTable">
+        <Position x="1278" y="318" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TableMode>Basic</TableMode>
+          <GroupingFields orderChanged="False" />
+          <Width>100%</Width>
+          <ShowHeader value="True" />
+          <ShowBarGraph value="False" />
+          <TableFields orderChanged="False">
+            <Field name="__HTML__" selected="True" Alignment="Right" />
+            <Field name="*Unknown" selected="True" Alignment="Right" />
+          </TableFields>
+          <TableStyles>
+            <Style Name="Data" Font="Arial" Size="8" TextColor="#000000" BackColor="#ffffff" AltColor="#f0f0f0" RowGroup="1" />
+            <Style Name="Header" Font="Arial" Size="10" TextColor="#000000" BackColor="#dbdbdb" />
+            <Style Name="Borders" Width="1" DataColor="#000000" HeaderColor="#000000" RowBorder="None" BasicColBorder="Default (Use Per Column Setting)" />
+            <Style Name="Table" CellPadding="0" ColumnPadding="0" TableBorder="true" Width="1" BorderColor="#000000" />
+          </TableStyles>
+          <StyleRules />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Basic Table</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Table" size="1073741823" source="Report:Table:Basic:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTablePlugin" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicRename.DynamicRename">
+        <Position x="1374" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <RenameMode>RightInputMetadata</RenameMode>
+          <Fields orderChanged="False">
+            <Field name="__HTML__" />
+            <Field name="*Unknown" />
+          </Fields>
+          <Expression />
+          <NamesFromMetadata>
+            <OnError>Ignore</OnError>
+            <ChangeFields>True</ChangeFields>
+          </NamesFromMetadata>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Table" size="1073741823" source="Report:Table:Basic:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicRename" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1278" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\AHMABA\AppData\Local\Temp\Engine_20356_645b0f6b52bacc43ae470e12b3f81737_\Engine_20356_8f910b2bafb4c344b2bb7f98f0cfe0f3~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="1782" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output20</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="66" y="342" width="240" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Locate local Alteryx Python 3.8.5 Installation
+This can vary from one machine to another</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1446" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\AHMABA\AppData\Local\Temp\Engine_20356_645b0f6b52bacc43ae470e12b3f81737_\Engine_20356_d3237be1f9808a4188182b71e9dda640~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Directory.Directory">
+        <Position x="66" y="558" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Directory>..</Directory>
+          <FileSpec>*.pyz</FileSpec>
+          <IncludeSubDirs value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>dir ..\*.pyz</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="FullPath" size="32767" type="V_WString" />
+            <Field name="Directory" size="32767" type="V_WString" />
+            <Field name="FileName" size="260" type="V_WString" />
+            <Field name="ShortFileName" size="14" type="V_WString" />
+            <Field name="CreationTime" type="DateTime" />
+            <Field name="LastAccessTime" type="DateTime" />
+            <Field name="LastWriteTime" type="DateTime" />
+            <Field name="Size" type="Int64" />
+            <Field name="AttributeArchive" type="Bool" />
+            <Field name="AttributeCompressed" type="Bool" />
+            <Field name="AttributeEncrypted" type="Bool" />
+            <Field name="AttributeHidden" type="Bool" />
+            <Field name="AttributeNormal" type="Bool" />
+            <Field name="AttributeOffline" type="Bool" />
+            <Field name="AttributeReadonly" type="Bool" />
+            <Field name="AttributeReparsePoint" type="Bool" />
+            <Field name="AttributeSparseFile" type="Bool" />
+            <Field name="AttributeSystem" type="Bool" />
+            <Field name="AttributeTemporary" type="Bool" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDirectory" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="174" y="558" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="FullPath" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="FullPath" size="32767" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="66" y="510" width="240" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Locate python zipapp fullpath</Text>
+          <Font name="Arial" size="12" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
+        <Position x="474" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldFind>Script</FieldFind>
+          <FieldSearch>find</FieldSearch>
+          <ReplaceFoundField>FullPath</ReplaceFoundField>
+          <FindMode>FindAny</FindMode>
+          <NoCase value="False" />
+          <MatchWholeWord value="False" />
+          <ReplaceMode>Replace</ReplaceMode>
+          <ReplaceMultipleFound value="True" />
+          <ReplaceAppendFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Script" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="270" y="558" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="'__python_module__'" field="find" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[find = '__python_module__'
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="FullPath" size="32767" type="V_WString" />
+            <Field name="find" size="1073741823" source="Formula: '__python_module__'" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="990" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\AHMABA\AppData\Local\Temp\Engine_20356_645b0f6b52bacc43ae470e12b3f81737_\Engine_20356_0370bf99ccc75143bce2fafac3ff7b57~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.QuestionTextBox">
+        <Position x="1578" y="138" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Text Box (32)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="1578" y="210" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Update Value</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="34">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="66" y="822" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False" />
+          <Name>Input34</Name>
+          <Abbrev />
+          <ShowFieldMap value="False" />
+          <Optional value="True" />
+          <TextInput>
+            <Configuration>
+              <NumRows value="1" />
+              <Fields>
+                <Field name="1" />
+              </Fields>
+              <Data>
+                <r>
+                  <c>1</c>
+                </r>
+              </Data>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Input</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="1" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="965" y="212" width="200" height="208" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 35</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RunCommand.RunCommand">
+            <Position x="990" y="270" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OutputConfiguration>
+                <Configuration>
+                  <File MaxRecords="" FileFormat="0">%temp%\word2html.bat</File>
+                  <Passwords />
+                  <Disable>False</Disable>
+                  <FormatSpecificOptions>
+                    <LineEndStyle>CRLF</LineEndStyle>
+                    <Delimeter>\0</Delimeter>
+                    <ForceQuotes>False</ForceQuotes>
+                    <HeaderRow>False</HeaderRow>
+                    <CodePage>28591</CodePage>
+                    <WriteBOM>True</WriteBOM>
+                  </FormatSpecificOptions>
+                  <MultiFile value="False" />
+                </Configuration>
+              </OutputConfiguration>
+              <InputConfiguration>
+                <Configuration>
+                  <Passwords />
+                  <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">%temp%\sample*.html</File>
+                  <FormatSpecificOptions>
+                    <HeaderRow>False</HeaderRow>
+                    <IgnoreErrors>False</IgnoreErrors>
+                    <AllowShareWrite>False</AllowShareWrite>
+                    <ImportLine>1</ImportLine>
+                    <FieldLen>50000</FieldLen>
+                    <SingleThreadRead>False</SingleThreadRead>
+                    <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                    <Delimeter>\0</Delimeter>
+                    <QuoteRecordBreak>False</QuoteRecordBreak>
+                    <CodePage>65001</CodePage>
+                  </FormatSpecificOptions>
+                </Configuration>
+              </InputConfiguration>
+              <ProgramName>%temp%\word2html.bat</ProgramName>
+              <Arguments>&gt; %temp%\results.txt 2&gt;&amp;1</Arguments>
+              <WorkingDir />
+              <RunMinimized value="True" />
+              <RunSilent value="True" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Run word2html.bat</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Field_1" size="50000" source="File: C:\Users\AHMABA\AppData\Local\Temp\Engine_16112_657653eb68dc474fac557f390cd8b5eb_\sample.html" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRunCommand" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="37">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="306" y="906" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">%Engine.TempFilePath%context.csv</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>65001</CodePage>
+            <WriteBOM>True</WriteBOM>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>%Engine.TempFilePath%context.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="41">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="66" y="762" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="context_file" />
+            <Field name="find" />
+            <Field name="replacement" />
+          </Fields>
+          <Data>
+            <r>
+              <c>%Engine.TempFilePath%context.csv</c>
+              <c>--csvfile "context_file"</c>
+              <c>--csvfile "%Engine.TempFilePath%context.csv"</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="context_file" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="find" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="replacement" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="42">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="510" y="798" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="FileExists([context_file])" field="exists" size="1" type="Bool" />
+            <FormulaField expression="if [exists] then &#xA;'--csvfile &quot;'&#xA;+[context_file]&#xA;+'&quot;'&#xA;else '' endif" field="replacement" size="2147483647" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>exists = FileExists([context_file])
+replacement = if [exists] then 
+'--csvfile "...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="context_file" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="find" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="replacement" size="2147483647" source="Formula: if [exists] then &#xA;'--csvfile &quot;'&#xA;+[context_file]&#xA;+'&quot;'&#xA;else '' endif" type="V_String" />
+            <Field name="1" source="TextInput:" type="Int32" />
+            <Field name="exists" source="Formula: FileExists([context_file])" type="Bool" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="43">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="2070" y="546" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output43</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Output</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="222" y="798" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="True">
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="context_file" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="find" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="replacement" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="context_file" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="find" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="replacement" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="1" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="1" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="45">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BlockUntilDone.BlockUntilDone">
+        <Position x="414" y="798" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="context_file" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="find" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="replacement" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="1" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Output2">
+          <RecordInfo>
+            <Field name="context_file" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="find" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="replacement" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="1" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Output3">
+          <RecordInfo>
+            <Field name="context_file" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="find" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="replacement" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="1" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBlockUntilDone" />
+    </Node>
+    <Node ToolID="46">
+      <GuiSettings>
+        <Position x="318" y="798" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Ranges">-1</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="context_file" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="find" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="replacement" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="1" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="SelectRecords.yxmc" />
+    </Node>
+    <Node ToolID="47">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
+        <Position x="702" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldFind>Script</FieldFind>
+          <FieldSearch>find</FieldSearch>
+          <ReplaceFoundField>replacement</ReplaceFoundField>
+          <FindMode>FindAny</FindMode>
+          <NoCase value="False" />
+          <MatchWholeWord value="False" />
+          <ReplaceMode>Replace</ReplaceMode>
+          <ReplaceMultipleFound value="False" />
+          <ReplaceAppendFields />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Script" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
+    </Node>
+    <Node ToolID="48">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="642" y="798" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>IsTrue</Operator>
+            <Field>exists</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-01-30 11:29:10</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2024-01-30 11:29:10</StartDate>
+              <EndDate>2024-01-30 11:29:10</EndDate>
+              <Operand>
+              </Operand>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[exists] = 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="context_file" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="find" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="replacement" size="2147483647" source="Formula: if [exists] then &#xA;'--csvfile &quot;'&#xA;+[context_file]&#xA;+'&quot;'&#xA;else '' endif" type="V_String" />
+            <Field name="1" source="TextInput:" type="Int32" />
+            <Field name="exists" source="Formula: FileExists([context_file])" type="Bool" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="context_file" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="find" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="replacement" size="2147483647" source="Formula: if [exists] then &#xA;'--csvfile &quot;'&#xA;+[context_file]&#xA;+'&quot;'&#xA;else '' endif" type="V_String" />
+            <Field name="1" source="TextInput:" type="Int32" />
+            <Field name="exists" source="Formula: FileExists([context_file])" type="Bool" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="49">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="798" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace([Script]&#xA;, '--csvfile &quot;context_file&quot;', &#xA;'')" field="Script" size="2147483647" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Script = Replace([Script]
+, '--csvfile "context_file"', 
+'')
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Script" size="2147483647" source="Formula: Replace([Script]&#xA;, '--csvfile &quot;context_file&quot;', &#xA;'')" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="51">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="942" y="486" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>Contains</Operator>
+            <Field>Script</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2024-01-30 11:29:48</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>'--csvfile "context_file"'</Operand>
+              <StartDate>2024-01-30 11:29:48</StartDate>
+              <EndDate>2024-01-30 11:29:48</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Contains([Script],"'--csvfile " + '"' + "context_file" + '"' + "'")</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="Script" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="Script" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="53">
+      <GuiSettings>
+        <Position x="1782" y="522" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Ranges">2-</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Script" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="SelectRecords.yxmc" />
+    </Node>
+    <Node ToolID="52">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="1950" y="546" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="True">
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Script" size="2147483647" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Join">
+          <RecordInfo>
+            <Field name="Script" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="1" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="1" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1253" y="680" width="200" height="142" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 22</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="18">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+            <Position x="1278" y="738" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Field>__HTML__</Field>
+              <RegExExpression value="(&lt;img src=&quot;)(1)(\.\l+&quot; /&gt;)" />
+              <CaseInsensitve value="True" />
+              <Method>Replace</Method>
+              <Replace expression="$1Engine.TempFilePath$2$3">
+                <CopyUnmatched value="True" />
+              </Replace>
+              <ParseSimple>
+                <SplitToRows value="False" />
+                <RootName>__HTML__</RootName>
+                <NumFields value="3" />
+                <ErrorHandling>Warn</ErrorHandling>
+              </ParseSimple>
+              <ParseComplex>
+                <Field field="RegExOut1" type="V_String" size="100000" />
+                <Field field="RegExOut2" type="V_String" size="100000" />
+                <Field field="RegExOut3" type="V_String" size="100000" />
+              </ParseComplex>
+              <Match>
+                <Field>__HTML___Matched</Field>
+                <ErrorUnmatched value="False" />
+              </Match>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="__HTML__" size="50000" source="File: C:\Users\AHMABA\AppData\Local\Temp\Engine_8012_1025286ed2c94d4395f84df90c87e85e_\sample.html" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="3" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="29" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="29" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="True" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="53" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="17" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="17" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="33" Connection="Action" />
+      <Destination ToolID="13" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="47" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="48" Connection="True" />
+      <Destination ToolID="47" Connection="Source" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="32" Connection="Question" />
+      <Destination ToolID="33" Connection="Question" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="44" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="41" Connection="Output" />
+      <Destination ToolID="44" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="34" Connection="Output" />
+      <Destination ToolID="52" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="52" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="42" Connection="Output" />
+      <Destination ToolID="48" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="Join" />
+      <Destination ToolID="46" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="Output2" />
+      <Destination ToolID="42" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="46" Connection="Output" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="47" Connection="Output" />
+      <Destination ToolID="49" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="47" Connection="Output" />
+      <Destination ToolID="51" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="49" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="52" Connection="Join" />
+      <Destination ToolID="43" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>WordFile</Name>
+        <Value>\\intern.gladsaxe.dk\ns1\bi\Groups\DAFO\Projekter\Smarte_Anvisningsrapporter\email skabeloner\intro_mail.docx</Value>
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Text Box (32)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Output (43)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="False" />
+      <Name>MS Word to HTML</Name>
+      <Description>Read MS Office Word files (.docx, .doc) as HTML.
+View using browse tool and send using email tool.</Description>
+      <RootToolName />
+      <ToolVersion>3</ToolVersion>
+      <ToolInDb value="False" />
+      <CategoryName>Macros/Ahmads Macroer</CategoryName>
+      <SearchTags>word, html, email, docx, doc</SearchTags>
+      <Author>AHMABA</Author>
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="873abd32-5218-4e66-951a-4ce130408640" />
+      <Telemetry>
+        <PreviousWorkflowId value="66958a06-db98-4518-934d-2532e5ab900a" />
+        <OriginWorkflowId value="5a00afa1-05f4-47bb-a216-85088031c30d" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <RuntimeProperties>
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>UpdateValue</Type>
+              <Description />
+              <ToolId value="33" />
+              <Mode>Simple</Mode>
+              <Variable />
+              <Replace value="False" />
+              <Destination>13/SelectFields/SelectField[@field='Table']/@rename</Destination>
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (7)</Name>
+          <ToolId value="7" />
+          <Questions>
+            <Question>
+              <Type>FileBrowse</Type>
+              <Description>Choose word file</Description>
+              <Name>WordFile</Name>
+              <ToolId value="10" />
+              <SaveAs value="False" />
+              <Mode>FileSpec</Mode>
+              <FileSpec>*.doc*</FileSpec>
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (20)</Name>
+              <ToolId value="20" />
+            </Question>
+            <Question>
+              <Type>TextBox</Type>
+              <Description>HTML Output Field Name</Description>
+              <Name>Text Box (32)</Name>
+              <ToolId value="32" />
+              <Default>__HTML__</Default>
+              <Password value="False" />
+              <Multiline value="False" />
+              <Hidden value="False" />
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (34)</Name>
+              <ToolId value="34" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description />
+              <Name>Macro Output (43)</Name>
+              <ToolId value="43" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImage>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</MacroImage>
+      <MacroInputs />
+      <MacroOutputs />
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="6" Selected="True" />
+        <Tool ToolId="19" Selected="False" />
+        <Tool ToolId="20" Selected="True" />
+        <Tool ToolId="23" Selected="False" />
+        <Tool ToolId="31" Selected="False" />
+        <Tool ToolId="34" Selected="True" />
+        <Tool ToolId="43" Selected="False" />
+        <Tool ToolId="37" Selected="True" />
+        <Tool ToolId="46" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

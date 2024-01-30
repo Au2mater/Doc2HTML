@@ -3,6 +3,7 @@ from jinja2 import Environment, FileSystemLoader
 import sys
 from pathlib import Path
 import argparse
+import csv
 
 
 def validate_word_file(filepath: str):
@@ -70,19 +71,26 @@ def render_template(template_file: str, csvfile: str, output: str = None):
         return
 
     # read the csv file into a dictionary
-    with open(csvfile, "r", encoding="utf-8") as f:
-        columns = [c.strip() for c in f.readline().split(",")]
+    # with open(csvfile, "r", encoding="utf-8") as f:
+    #     columns = [c.strip() for c in f.readline().split(",")]
+    #     rows = []
+    #     for rownum , line in enumerate(f.readlines()):
+    #         row = {}
+    #         for i, cell in enumerate(line.split(",")):
+    #             row[columns[i]] = cell.strip()
+    #             row['rownum'] = rownum+1
+    #         rows.append(row)
+    # read using csv module
+    with open(csvfile, "r", encoding="utf-8-sig") as f:
+        reader = csv.DictReader(f)
         rows = []
-        for rownum , line in enumerate(f.readlines()):
-            row = {}
-            for i, cell in enumerate(line.split(",")):
-                row[columns[i]] = cell.strip()
-                row['rownum'] = rownum+1
+        for rownum, row in enumerate(reader):
+            row["rownum"] = rownum + 1
             rows.append(row)
-
+    print(rows)
     # create output directory if it does not exist
     if output == None:
-        output = str(Path(template_file).parent / "output")
+        output = str(Path(template_file).parent )
     Path(output).mkdir(parents=True, exist_ok=True)
     print("output directory created")
 

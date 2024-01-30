@@ -45,11 +45,11 @@ def test_wordtemplate_to_html_1(wordfile):
     assert os.path.exists(html)
     # check if the two html files exists in output/output
     rendered_htmlfiles = [
-        os.path.join(output, "output", f)
-        for f in os.listdir(os.path.join(output, "output"))
+        os.path.join(output, f)
+        for f in os.listdir(output)
         if "htm" in f
     ]
-    assert len(rendered_htmlfiles) == 2
+    assert len(rendered_htmlfiles)-1 == 2
 
 
 def test_wordtemplate_custom_output(wordfile):

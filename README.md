@@ -1,7 +1,7 @@
 
 <img src="doc2html.png" alt="Alt DOC2HTML" width="300" >
 
-## Table of Contents
+## Contents
 
 - [Description](#description)
 - [Use Cases](#use-cases)
@@ -9,7 +9,9 @@
   - [Content Management Systems](#content-management-systems)
   - [Web Publishing](#web-publishing)
 - [Installation](#installation)
-- [Usage](#Command-Line-Interface-(CLI)-Usage)
+- [Usage](#usage)
+  - [Command-Line Interface (CLI)](#command-line-interface-cli)
+  - [Alteryx Macro](#alteryx-macro)
 - [Development](#development)
 - [Contributing](#contributing)
 - [License](#license)
@@ -39,7 +41,11 @@ If you want to publish Word documents on the web, you can use Doc2HTML to conver
 
 For simple usage, ensure you have Python >= 3.8.5 installed and download the `doc2html_app.pyz` file from the repository.
 
-## Command-Line Interface (CLI) Usage
+## Usage
+
+Word2HTML can be used in two ways: as aas a command-line application and an Alteryx macro.
+
+### Command-Line Interface (CLI)
 Run the application with the path to the Word document as an argument:
 ```sh
 python doc2html_app.pyz --wordfile sample_data/sample_word_file.docx
@@ -59,6 +65,8 @@ Here's an example of how to use these arguments:
 ```sh
 python doc2html_app.pyz --wordfile path_to_your_word_file --htmlfile path_to_your_html_file --outputdir path_to_your_output_dir --csvfile path_to_your_csv_file
 ``` 
+### Alteryx Macro
+...
 
 ## Development
 For further development, clone the repository to your local machine:
