@@ -74,7 +74,11 @@ def render_template(template_file: str, csvfile: str, output: str = None):
         reader = csv.DictReader(f)
         rows = []
         for rownum, row in enumerate(reader):
-            row["rownum"] = rownum + 1
+            # if rownum is a valid column name, use it as rownum
+            if "rownum" in row.keys():
+                row["rownum"] = row["rownum"]
+            else:
+                row["rownum"] = rownum + 1
             rows.append(row)
     print(rows)
     # create output directory if it does not exist
