@@ -17,7 +17,7 @@
 
 ## Description
 
-Doc2HTML is a pure Python application that converts Word documents to HTML format. It uses the `mammoth` library for the conversion and `jinja2` for HTML templating. The application can be run as a standalone zipapp, requiring only Python >= 3.8.5. It has no C dependencies, making it highly portable across different systems.
+Doc2HTML converts Word documents and templates to HTML format. It uses the `mammoth` library for the conversion and `jinja2` for HTML templating. The application can be run as a standalone zipapp, requiring only Python >= 3.8.5. It is a pure Python application that has no C dependencies, making it highly portable across different systems.
 
 ## Use Cases
 
