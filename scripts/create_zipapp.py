@@ -12,7 +12,7 @@ app_name.mkdir(exist_ok=True)
 
 # copy main_file to the app_name/__main__.py
 with open(app_name / '__main__.py', 'w') as f:
-    with open(main_file, 'r') as f2:
+    with open(main_file, 'r', encoding='utf-8') as f2:
         f.write(f2.read())
 
 # install dependencies to the packaging folder

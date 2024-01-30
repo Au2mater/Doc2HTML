@@ -4,7 +4,7 @@ import sys
 from pathlib import Path
 import argparse
 import csv
-
+import html
 
 def validate_word_file(filepath: str):
     """check if filepath exists and is a valid word document"""
@@ -52,6 +52,8 @@ def doc2html(input: str, output: str = None):
         output = str(Path(input).parent / "output" / Path(input).stem) + ".html"
         # ensure that output directory exists
         Path(output).parent.mkdir(parents=True, exist_ok=True)
+        # replace ” with " and ’ with '
+        # result.value = result.value.replace('”', '&rdquo;').replace('’', '&rsquo;')
         with open(output, "w", encoding="utf-8") as html_file:
             html_file.write(result.value)
             print(f"converted html written to {output}")
@@ -80,7 +82,7 @@ def render_template(template_file: str, csvfile: str, output: str = None):
             else:
                 row["rownum"] = rownum + 1
             rows.append(row)
-    print(rows)
+    # print(rows)
     # create output directory if it does not exist
     if output is None:
         output = str(Path(template_file).parent)
@@ -90,6 +92,11 @@ def render_template(template_file: str, csvfile: str, output: str = None):
     # read the html file
     with open(template_file, "r", encoding="utf-8") as f:
         template = f.read()
+    
+    # unescape html entities
+    
+    template = html.unescape(template)
+
 
     # render the html file with jinja2
     env = Environment(loader=FileSystemLoader("."))

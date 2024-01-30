@@ -3,7 +3,7 @@
   <Nodes>
     <Node ToolID="2">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-        <Position x="66" y="258" />
+        <Position x="66" y="312" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -35,7 +35,7 @@
     </Node>
     <Node ToolID="3">
       <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-        <Position x="408" y="270" />
+        <Position x="408" y="324" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -64,7 +64,7 @@
     </Node>
     <Node ToolID="4">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-        <Position x="66" y="402" />
+        <Position x="66" y="456" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -104,7 +104,7 @@
     </Node>
     <Node ToolID="5">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="162" y="402" />
+        <Position x="162" y="456" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -135,7 +135,7 @@
     </Node>
     <Node ToolID="6">
       <GuiSettings>
-        <Position x="234" y="402" />
+        <Position x="234" y="456" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -171,7 +171,7 @@
     </Node>
     <Node ToolID="10">
       <GuiSettings Plugin="AlteryxGuiToolkit.Questions.FileBrowse.FileBrowse">
-        <Position x="54" y="54" width="59" height="59" />
+        <Position x="54" y="108" width="59" height="59" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -185,7 +185,7 @@
     </Node>
     <Node ToolID="12">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="1010" y="270" />
+        <Position x="1010" y="324" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -212,7 +212,7 @@
     </Node>
     <Node ToolID="13">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1913" y="270" />
+        <Position x="1913" y="324" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -239,7 +239,7 @@
     </Node>
     <Node ToolID="14">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1462" y="270" />
+        <Position x="1462" y="324" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -265,7 +265,7 @@
     </Node>
     <Node ToolID="15">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1311" y="270" />
+        <Position x="1311" y="324" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -292,7 +292,7 @@
     </Node>
     <Node ToolID="16">
       <GuiSettings Plugin="PortfolioPluginsGui.ComposerTable.PortfolioComposerTable">
-        <Position x="1612" y="270" />
+        <Position x="1612" y="324" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -328,7 +328,7 @@
     </Node>
     <Node ToolID="17">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicRename.DynamicRename">
-        <Position x="1763" y="270" />
+        <Position x="1763" y="324" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -359,7 +359,7 @@
     </Node>
     <Node ToolID="19">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1386" y="378" />
+        <Position x="1386" y="432" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -387,7 +387,7 @@
     </Node>
     <Node ToolID="20">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="2214" y="270" />
+        <Position x="2214" y="324" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -405,7 +405,7 @@
     </Node>
     <Node ToolID="21">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-        <Position x="258" y="342" width="240" height="40" />
+        <Position x="258" y="396" width="240" height="40" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -426,7 +426,7 @@ This can vary from one machine to another</Text>
     </Node>
     <Node ToolID="23">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1578" y="378" />
+        <Position x="1578" y="432" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -454,7 +454,7 @@ This can vary from one machine to another</Text>
     </Node>
     <Node ToolID="26">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Directory.Directory">
-        <Position x="66" y="558" />
+        <Position x="66" y="612" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -495,7 +495,7 @@ This can vary from one machine to another</Text>
     </Node>
     <Node ToolID="27">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="174" y="558" />
+        <Position x="174" y="612" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -521,7 +521,7 @@ This can vary from one machine to another</Text>
     </Node>
     <Node ToolID="28">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-        <Position x="66" y="510" width="240" height="40" />
+        <Position x="66" y="564" width="240" height="40" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -541,7 +541,7 @@ This can vary from one machine to another</Text>
     </Node>
     <Node ToolID="29">
       <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-        <Position x="559" y="270" />
+        <Position x="559" y="324" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -570,7 +570,7 @@ This can vary from one machine to another</Text>
     </Node>
     <Node ToolID="30">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="270" y="558" />
+        <Position x="270" y="612" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -595,7 +595,7 @@ This can vary from one machine to another</Text>
     </Node>
     <Node ToolID="31">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1182" y="114" />
+        <Position x="1182" y="168" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -623,7 +623,7 @@ This can vary from one machine to another</Text>
     </Node>
     <Node ToolID="32">
       <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.QuestionTextBox">
-        <Position x="1998" y="78" width="59" height="59" />
+        <Position x="1998" y="132" width="59" height="59" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -637,7 +637,7 @@ This can vary from one machine to another</Text>
     </Node>
     <Node ToolID="33">
       <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-        <Position x="1998" y="174" width="59" height="59" />
+        <Position x="1998" y="228" width="59" height="59" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -651,7 +651,7 @@ This can vary from one machine to another</Text>
     </Node>
     <Node ToolID="34">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
-        <Position x="66" y="822" />
+        <Position x="66" y="876" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -690,7 +690,7 @@ This can vary from one machine to another</Text>
     </Node>
     <Node ToolID="37">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
-        <Position x="306" y="906" />
+        <Position x="306" y="960" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -717,7 +717,7 @@ This can vary from one machine to another</Text>
     </Node>
     <Node ToolID="41">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-        <Position x="66" y="762" />
+        <Position x="66" y="816" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -752,7 +752,7 @@ This can vary from one machine to another</Text>
     </Node>
     <Node ToolID="42">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="546" y="798" />
+        <Position x="546" y="852" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -782,7 +782,7 @@ replacement = if [exists] then
     </Node>
     <Node ToolID="43">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="2310" y="414" />
+        <Position x="2310" y="468" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -800,7 +800,7 @@ replacement = if [exists] then
     </Node>
     <Node ToolID="44">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="258" y="798" />
+        <Position x="258" y="852" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="True">
@@ -844,7 +844,7 @@ replacement = if [exists] then
     </Node>
     <Node ToolID="45">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BlockUntilDone.BlockUntilDone">
-        <Position x="450" y="798" />
+        <Position x="450" y="852" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -882,7 +882,7 @@ replacement = if [exists] then
     </Node>
     <Node ToolID="46">
       <GuiSettings>
-        <Position x="354" y="798" />
+        <Position x="354" y="852" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -906,7 +906,7 @@ replacement = if [exists] then
     </Node>
     <Node ToolID="47">
       <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-        <Position x="709" y="270" />
+        <Position x="709" y="324" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -935,7 +935,7 @@ replacement = if [exists] then
     </Node>
     <Node ToolID="48">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="642" y="798" />
+        <Position x="642" y="852" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -985,7 +985,7 @@ replacement = if [exists] then
     </Node>
     <Node ToolID="49">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="860" y="270" />
+        <Position x="860" y="324" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1011,7 +1011,7 @@ replacement = if [exists] then
     </Node>
     <Node ToolID="53">
       <GuiSettings>
-        <Position x="2022" y="378" />
+        <Position x="2022" y="432" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1033,7 +1033,7 @@ replacement = if [exists] then
     </Node>
     <Node ToolID="52">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="2214" y="414" />
+        <Position x="2214" y="468" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="False">
@@ -1085,7 +1085,7 @@ replacement = if [exists] then
     </Node>
     <Node ToolID="55">
       <GuiSettings>
-        <Position x="2064" y="270" />
+        <Position x="2064" y="324" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1107,7 +1107,7 @@ replacement = if [exists] then
     </Node>
     <Node ToolID="56">
       <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
-        <Position x="186" y="906" />
+        <Position x="186" y="960" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1133,7 +1133,7 @@ replacement = if [exists] then
     </Node>
     <Node ToolID="58">
       <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
-        <Position x="2118" y="378" />
+        <Position x="2118" y="432" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1173,9 +1173,22 @@ replacement = if [exists] then
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
     </Node>
+    <Node ToolID="59">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Label.Label">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
     <Node ToolID="35">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="1136" y="212" width="200" height="208" />
+        <Position x="1136" y="266" width="200" height="208" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1193,7 +1206,7 @@ replacement = if [exists] then
       <ChildNodes>
         <Node ToolID="11">
           <GuiSettings Plugin="AlteryxBasePluginsGui.RunCommand.RunCommand">
-            <Position x="1161" y="270" />
+            <Position x="1161" y="324" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1255,7 +1268,7 @@ replacement = if [exists] then
     </Node>
     <Node ToolID="22">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="1397" y="0" width="200" height="142" />
+        <Position x="1397" y="54" width="200" height="142" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1273,7 +1286,7 @@ replacement = if [exists] then
       <ChildNodes>
         <Node ToolID="18">
           <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
-            <Position x="1422" y="58" />
+            <Position x="1422" y="112" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1570,7 +1583,7 @@ View using browse tool and send using email tool.</Description>
           <Questions>
             <Question>
               <Type>FileBrowse</Type>
-              <Description>Choose word file</Description>
+              <Description>Choose word file (*.doc , *.docx)</Description>
               <Name>WordFile</Name>
               <ToolId value="10" />
               <SaveAs value="False" />
@@ -1604,6 +1617,12 @@ View using browse tool and send using email tool.</Description>
               <Description />
               <Name>Macro Output (43)</Name>
               <ToolId value="43" />
+            </Question>
+            <Question>
+              <Type>Label</Type>
+              <Description>For templating write column names in double curly brackets {{ column_name }}</Description>
+              <Name>Label (59)</Name>
+              <ToolId value="59" />
             </Question>
           </Questions>
         </Question>
