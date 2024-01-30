@@ -9,6 +9,8 @@
   - [Content Management Systems](#content-management-systems)
   - [Web Publishing](#web-publishing)
 - [Installation](#installation)
+  - [Command-Line Interface (CLI)](#command-line-interface-cli-1)
+  - [Alteryx Macro](#alteryx-macro-1)
 - [Usage](#usage)
   - [Command-Line Interface (CLI)](#command-line-interface-cli)
   - [Alteryx Macro](#alteryx-macro)
@@ -40,10 +42,10 @@ If you want to publish Word documents on the web, you can use Doc2HTML to conver
 ## Installation
 
 ### Command-Line Interface (CLI)
-For simple usage, ensure you have Python >= 3.8.5 installed and download the `doc2html_app.pyz` file from the repository.
+For simple usage, ensure you have Python >= 3.8.5 installed and download the [`doc2html_app.pyz`](https://github.com/Au2mater/Doc2HTML/blob/main/doc2html_app.pyz) file from the repository.
 
 ### Alteryx Macro
-Download the [Alteryx_Doc2HTML.zip](https://github.com/Au2mater/Doc2HTML/blob/main/Alteryx_Doc2HTML.zip) file from the repository. This contains the Alteryx macro and sample data.
+Download the [`Alteryx_Doc2HTML.zip`](https://github.com/Au2mater/Doc2HTML/blob/main/Alteryx_Doc2HTML.zip) file from the repository. This contains the Alteryx macro and sample data.
 
 ## Usage
 
