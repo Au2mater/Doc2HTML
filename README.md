@@ -39,7 +39,11 @@ If you want to publish Word documents on the web, you can use Doc2HTML to conver
 
 ## Installation
 
+### Command-Line Interface (CLI)
 For simple usage, ensure you have Python >= 3.8.5 installed and download the `doc2html_app.pyz` file from the repository.
+
+### Alteryx Macro
+Download the [Alteryx_Doc2HTML.zip](https://github.com/Au2mater/Doc2HTML/blob/main/Alteryx_Doc2HTML.zip) file from the repository. This contains the Alteryx macro and sample data.
 
 ## Usage
 
@@ -66,7 +70,7 @@ Here's an example of how to use these arguments:
 python doc2html_app.pyz --wordfile path_to_your_word_file --htmlfile path_to_your_html_file --outputdir path_to_your_output_dir --csvfile path_to_your_csv_file
 ``` 
 ### Alteryx Macro
-Download the [Alteryx_Doc2HTML.zip](https://github.com/Au2mater/Doc2HTML/blob/main/Alteryx_Doc2HTML.zip) file from the repository. This contains the Alteryx macro and sample data. To use the macro, open the Alteryx workflow in the Alteryx Designer and drag the macro onto the canvas. Connect the macro to the rest of your workflow and configure the macro as follows:
+Unzip the 'Alteryx_Doc2HTML.zip'.To use the macro, open the Alteryx workflow in the Alteryx Designer and drag the macro onto the canvas. Connect the macro to the rest of your workflow and configure the macro as follows:
 ![Alt text](screenshot.jpg)
 
 ## Development
