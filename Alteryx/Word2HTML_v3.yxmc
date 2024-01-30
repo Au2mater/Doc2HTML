@@ -35,7 +35,7 @@
     </Node>
     <Node ToolID="3">
       <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-        <Position x="378" y="270" />
+        <Position x="408" y="270" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -185,7 +185,7 @@
     </Node>
     <Node ToolID="12">
       <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
-        <Position x="894" y="270" />
+        <Position x="1010" y="270" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -212,7 +212,7 @@
     </Node>
     <Node ToolID="13">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1590" y="282" />
+        <Position x="1913" y="270" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -231,6 +231,7 @@
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="__HTML__" size="1073741823" source="Report:Table:Basic:" type="V_WString" />
+            <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -238,7 +239,7 @@
     </Node>
     <Node ToolID="14">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="1182" y="270" />
+        <Position x="1462" y="270" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -256,6 +257,7 @@
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="__HTML__" size="50000" source="Formula: '&lt;htmlpassthrough&gt;'&#xA;+'&lt;![CDATA[&lt;html&gt;'&#xA;//&lt;head&gt; &lt;meta charset=&quot;utf-8&quot; /&gt; &lt;/head&gt;&#xA;//&lt;body&gt;'&#xA;+[__HTML__]&#xA;//'&lt;/body&gt;&#xA;+'&lt;/html&gt;]]&gt;'&#xA;+'&lt;/htmlpassthrough&gt;'" type="V_WString" />
+            <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -263,7 +265,7 @@
     </Node>
     <Node ToolID="15">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
-        <Position x="1086" y="270" />
+        <Position x="1311" y="270" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -281,7 +283,8 @@
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="__HTML__" size="50000" source="File: C:\Users\AHMABA\AppData\Local\Temp\Engine_8456_37f6cacd379f754ebdcc829dffb436c5_\sample.html" type="V_WString" />
+            <Field name="__HTML__" size="50000" source="File: C:\Users\AHMABA\AppData\Local\Temp\Engine_17236_9f7b7bd6be4a9942998be5e089fae8ff_\sample.html" type="V_WString" />
+            <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -289,7 +292,7 @@
     </Node>
     <Node ToolID="16">
       <GuiSettings Plugin="PortfolioPluginsGui.ComposerTable.PortfolioComposerTable">
-        <Position x="1278" y="318" />
+        <Position x="1612" y="270" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -325,7 +328,7 @@
     </Node>
     <Node ToolID="17">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicRename.DynamicRename">
-        <Position x="1374" y="282" />
+        <Position x="1763" y="270" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -348,6 +351,7 @@
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="Table" size="1073741823" source="Report:Table:Basic:" type="V_WString" />
+            <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -355,11 +359,11 @@
     </Node>
     <Node ToolID="19">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1278" y="210" />
+        <Position x="1386" y="378" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\AHMABA\AppData\Local\Temp\Engine_22336_ccd1b671c4f44f4f9ccaabbf6753496d_\Engine_22336_3e2e3cec5b1df842acc2cd137ba844b9~.yxdb</TempFile>
+          <TempFile>C:\Users\AHMABA\AppData\Local\Temp\Engine_17128_d092f9e8e3bda249bf59aba07a6b92a8_\Engine_17128_f3a3fa4b008dc84f8286fe9db489f237~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -383,7 +387,7 @@
     </Node>
     <Node ToolID="20">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="1986" y="282" />
+        <Position x="2214" y="270" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -401,7 +405,7 @@
     </Node>
     <Node ToolID="21">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-        <Position x="66" y="342" width="240" height="40" />
+        <Position x="258" y="342" width="240" height="40" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -422,11 +426,11 @@ This can vary from one machine to another</Text>
     </Node>
     <Node ToolID="23">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1446" y="198" />
+        <Position x="1578" y="378" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\AHMABA\AppData\Local\Temp\Engine_22336_ccd1b671c4f44f4f9ccaabbf6753496d_\Engine_22336_086d3d4aa8c8ed4ebeec206237b91323~.yxdb</TempFile>
+          <TempFile>C:\Users\AHMABA\AppData\Local\Temp\Engine_17128_d092f9e8e3bda249bf59aba07a6b92a8_\Engine_17128_0cddb011133b054da50ca87247e033c8~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -537,7 +541,7 @@ This can vary from one machine to another</Text>
     </Node>
     <Node ToolID="29">
       <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-        <Position x="474" y="270" />
+        <Position x="559" y="270" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -591,11 +595,11 @@ This can vary from one machine to another</Text>
     </Node>
     <Node ToolID="31">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="990" y="114" />
+        <Position x="1182" y="114" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\AHMABA\AppData\Local\Temp\Engine_22336_ccd1b671c4f44f4f9ccaabbf6753496d_\Engine_22336_847d221a3739ac4c849c0e3b865f57a3~.yxdb</TempFile>
+          <TempFile>C:\Users\AHMABA\AppData\Local\Temp\Engine_17128_d092f9e8e3bda249bf59aba07a6b92a8_\Engine_17128_be166d5f31661247adc502e4ef44d0e6~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -619,7 +623,7 @@ This can vary from one machine to another</Text>
     </Node>
     <Node ToolID="32">
       <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.QuestionTextBox">
-        <Position x="1578" y="138" width="59" height="59" />
+        <Position x="1998" y="78" width="59" height="59" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -633,7 +637,7 @@ This can vary from one machine to another</Text>
     </Node>
     <Node ToolID="33">
       <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-        <Position x="1578" y="210" width="59" height="59" />
+        <Position x="1998" y="174" width="59" height="59" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -684,88 +688,6 @@ This can vary from one machine to another</Text>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
     </Node>
-    <Node ToolID="35">
-      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="965" y="212" width="200" height="208" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Caption>Container 35</Caption>
-          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
-          <Disabled value="False" />
-          <Folded value="False" />
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <ChildNodes>
-        <Node ToolID="11">
-          <GuiSettings Plugin="AlteryxBasePluginsGui.RunCommand.RunCommand">
-            <Position x="990" y="270" />
-          </GuiSettings>
-          <Properties>
-            <Configuration>
-              <OutputConfiguration>
-                <Configuration>
-                  <File MaxRecords="" FileFormat="0">%temp%\word2html.bat</File>
-                  <Passwords />
-                  <Disable>False</Disable>
-                  <FormatSpecificOptions>
-                    <LineEndStyle>CRLF</LineEndStyle>
-                    <Delimeter>\0</Delimeter>
-                    <ForceQuotes>False</ForceQuotes>
-                    <HeaderRow>False</HeaderRow>
-                    <CodePage>28591</CodePage>
-                    <WriteBOM>True</WriteBOM>
-                  </FormatSpecificOptions>
-                  <MultiFile value="False" />
-                </Configuration>
-              </OutputConfiguration>
-              <InputConfiguration>
-                <Configuration>
-                  <Passwords />
-                  <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">%temp%\sample*.html</File>
-                  <FormatSpecificOptions>
-                    <HeaderRow>False</HeaderRow>
-                    <IgnoreErrors>False</IgnoreErrors>
-                    <AllowShareWrite>False</AllowShareWrite>
-                    <ImportLine>1</ImportLine>
-                    <FieldLen>50000</FieldLen>
-                    <SingleThreadRead>False</SingleThreadRead>
-                    <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
-                    <Delimeter>\0</Delimeter>
-                    <QuoteRecordBreak>False</QuoteRecordBreak>
-                    <CodePage>65001</CodePage>
-                  </FormatSpecificOptions>
-                </Configuration>
-              </InputConfiguration>
-              <ProgramName>%temp%\word2html.bat</ProgramName>
-              <Arguments>&gt; %temp%\results.txt 2&gt;&amp;1</Arguments>
-              <WorkingDir />
-              <RunMinimized value="True" />
-              <RunSilent value="True" />
-            </Configuration>
-            <Annotation DisplayMode="0">
-              <Name />
-              <DefaultAnnotationText>Run word2html.bat</DefaultAnnotationText>
-              <Left value="False" />
-            </Annotation>
-            <Dependencies>
-              <Implicit />
-            </Dependencies>
-            <MetaInfo connection="Output">
-              <RecordInfo>
-                <Field name="Field_1" size="50000" source="File: C:\Users\AHMABA\AppData\Local\Temp\Engine_16112_657653eb68dc474fac557f390cd8b5eb_\sample.html" type="V_WString" />
-              </RecordInfo>
-            </MetaInfo>
-          </Properties>
-          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRunCommand" />
-        </Node>
-      </ChildNodes>
-    </Node>
     <Node ToolID="37">
       <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
         <Position x="306" y="906" />
@@ -790,9 +712,6 @@ This can vary from one machine to another</Text>
           <DefaultAnnotationText>%Engine.TempFilePath%context.csv</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
     </Node>
@@ -833,7 +752,7 @@ This can vary from one machine to another</Text>
     </Node>
     <Node ToolID="42">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="510" y="798" />
+        <Position x="546" y="798" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -863,7 +782,7 @@ replacement = if [exists] then
     </Node>
     <Node ToolID="43">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="2070" y="546" />
+        <Position x="2310" y="414" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -881,7 +800,7 @@ replacement = if [exists] then
     </Node>
     <Node ToolID="44">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="222" y="798" />
+        <Position x="258" y="798" />
       </GuiSettings>
       <Properties>
         <Configuration joinByRecordPos="True">
@@ -925,7 +844,7 @@ replacement = if [exists] then
     </Node>
     <Node ToolID="45">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BlockUntilDone.BlockUntilDone">
-        <Position x="414" y="798" />
+        <Position x="450" y="798" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -963,7 +882,7 @@ replacement = if [exists] then
     </Node>
     <Node ToolID="46">
       <GuiSettings>
-        <Position x="318" y="798" />
+        <Position x="354" y="798" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -974,9 +893,6 @@ replacement = if [exists] then
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="context_file" size="2147483647" source="TextInput:" type="V_String" />
@@ -990,7 +906,7 @@ replacement = if [exists] then
     </Node>
     <Node ToolID="47">
       <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
-        <Position x="702" y="270" />
+        <Position x="709" y="270" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1069,7 +985,7 @@ replacement = if [exists] then
     </Node>
     <Node ToolID="49">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="798" y="270" />
+        <Position x="860" y="270" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1093,50 +1009,9 @@ replacement = if [exists] then
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
     </Node>
-    <Node ToolID="51">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
-        <Position x="942" y="486" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Mode>Simple</Mode>
-          <Simple>
-            <Operator>Contains</Operator>
-            <Field>Script</Field>
-            <Operands>
-              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
-              <DateType>fixed</DateType>
-              <PeriodDate>2024-01-30 11:29:48</PeriodDate>
-              <PeriodType>
-              </PeriodType>
-              <PeriodCount>0</PeriodCount>
-              <Operand>'--csvfile "context_file"'</Operand>
-              <StartDate>2024-01-30 11:29:48</StartDate>
-              <EndDate>2024-01-30 11:29:48</EndDate>
-            </Operands>
-          </Simple>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText>Contains([Script],"'--csvfile " + '"' + "context_file" + '"' + "'")</DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-        <MetaInfo connection="True">
-          <RecordInfo>
-            <Field name="Script" size="2147483647" source="TextInput:" type="V_String" />
-          </RecordInfo>
-        </MetaInfo>
-        <MetaInfo connection="False">
-          <RecordInfo>
-            <Field name="Script" size="2147483647" source="TextInput:" type="V_String" />
-          </RecordInfo>
-        </MetaInfo>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
-    </Node>
     <Node ToolID="53">
       <GuiSettings>
-        <Position x="1782" y="522" />
+        <Position x="2022" y="378" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1147,12 +1022,10 @@ replacement = if [exists] then
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="__HTML__" size="1073741823" source="Report:Table:Basic:" type="V_WString" />
+            <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -1160,15 +1033,24 @@ replacement = if [exists] then
     </Node>
     <Node ToolID="52">
       <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
-        <Position x="1950" y="546" />
+        <Position x="2214" y="414" />
       </GuiSettings>
       <Properties>
-        <Configuration joinByRecordPos="True">
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="rownum" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="rownum" />
+          </JoinInfo>
           <SelectConfiguration>
             <Configuration outputConnection="Join">
               <OrderChanged value="False" />
               <CommaDecimal value="False" />
               <SelectFields>
+                <SelectField field="Left_FileName" selected="False" input="Left_" />
+                <SelectField field="Left_rownum" selected="False" input="Left_" />
+                <SelectField field="Right_rownum" selected="False" rename="Right_rownum" input="Right_" />
                 <SelectField field="*Unknown" selected="True" />
               </SelectFields>
             </Configuration>
@@ -1182,6 +1064,8 @@ replacement = if [exists] then
         <MetaInfo connection="Left">
           <RecordInfo>
             <Field name="__HTML__" size="1073741823" source="Report:Table:Basic:" type="V_WString" />
+            <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+            <Field description="RegEx: Parsed from FileName" name="rownum" source="RegEx: Parsed from FileName" type="Int32" />
           </RecordInfo>
         </MetaInfo>
         <MetaInfo connection="Join">
@@ -1192,6 +1076,7 @@ replacement = if [exists] then
         </MetaInfo>
         <MetaInfo connection="Right">
           <RecordInfo>
+            <Field name="rownum" source="RecordID: Starting Value=1" type="Int32" />
             <Field name="1" source="TextInput:" type="Int32" />
           </RecordInfo>
         </MetaInfo>
@@ -1200,7 +1085,7 @@ replacement = if [exists] then
     </Node>
     <Node ToolID="55">
       <GuiSettings>
-        <Position x="1746" y="282" />
+        <Position x="2064" y="270" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1211,20 +1096,166 @@ replacement = if [exists] then
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
-        <Dependencies>
-          <Implicit />
-        </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
             <Field name="__HTML__" size="1073741823" source="Report:Table:Basic:" type="V_WString" />
+            <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
       <EngineSettings Macro="SelectRecords.yxmc" />
     </Node>
+    <Node ToolID="56">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="186" y="906" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>rownum</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="rownum" source="RecordID: Starting Value=1" type="Int32" />
+            <Field name="1" source="TextInput:" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="58">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
+        <Position x="2118" y="378" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>FileName</Field>
+          <RegExExpression value="_(\d+)$" />
+          <CaseInsensitve value="True" />
+          <Method>ParseComplex</Method>
+          <Replace expression="">
+            <CopyUnmatched value="True" />
+          </Replace>
+          <ParseSimple>
+            <SplitToRows value="False" />
+            <RootName>FileName</RootName>
+            <NumFields value="3" />
+            <ErrorHandling>Warn</ErrorHandling>
+          </ParseSimple>
+          <ParseComplex>
+            <Field field="rownum" type="Int32" size="4" />
+          </ParseComplex>
+          <Match>
+            <Field>__HTML___Matched</Field>
+            <ErrorUnmatched value="False" />
+          </Match>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="__HTML__" size="1073741823" source="Report:Table:Basic:" type="V_WString" />
+            <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+            <Field description="RegEx: Parsed from FileName" name="rownum" source="RegEx: Parsed from FileName" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRegEx" />
+    </Node>
+    <Node ToolID="35">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1136" y="212" width="200" height="208" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 35</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RunCommand.RunCommand">
+            <Position x="1161" y="270" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OutputConfiguration>
+                <Configuration>
+                  <File MaxRecords="" FileFormat="0">%temp%\word2html.bat</File>
+                  <Passwords />
+                  <Disable>False</Disable>
+                  <FormatSpecificOptions>
+                    <LineEndStyle>CRLF</LineEndStyle>
+                    <Delimeter>\0</Delimeter>
+                    <ForceQuotes>False</ForceQuotes>
+                    <HeaderRow>False</HeaderRow>
+                    <CodePage>28591</CodePage>
+                    <WriteBOM>True</WriteBOM>
+                  </FormatSpecificOptions>
+                  <MultiFile value="False" />
+                </Configuration>
+              </OutputConfiguration>
+              <InputConfiguration>
+                <Configuration>
+                  <Passwords />
+                  <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="FileName">%temp%\sample*.html</File>
+                  <FormatSpecificOptions>
+                    <HeaderRow>False</HeaderRow>
+                    <IgnoreErrors>False</IgnoreErrors>
+                    <AllowShareWrite>False</AllowShareWrite>
+                    <ImportLine>1</ImportLine>
+                    <FieldLen>50000</FieldLen>
+                    <SingleThreadRead>False</SingleThreadRead>
+                    <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                    <Delimeter>\0</Delimeter>
+                    <QuoteRecordBreak>False</QuoteRecordBreak>
+                    <CodePage>65001</CodePage>
+                  </FormatSpecificOptions>
+                </Configuration>
+              </InputConfiguration>
+              <ProgramName>%temp%\word2html.bat</ProgramName>
+              <Arguments>&gt; %temp%\results.txt 2&gt;&amp;1</Arguments>
+              <WorkingDir />
+              <RunMinimized value="True" />
+              <RunSilent value="True" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Run word2html.bat</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Field_1" size="50000" source="File: C:\Users\AHMABA\AppData\Local\Temp\Engine_17236_9f7b7bd6be4a9942998be5e089fae8ff_\sample.html" type="V_WString" />
+                <Field name="FileName" size="254" source="File: FileName" type="V_WString" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRunCommand" />
+        </Node>
+      </ChildNodes>
+    </Node>
     <Node ToolID="22">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="1253" y="680" width="200" height="142" />
+        <Position x="1397" y="0" width="200" height="142" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -1242,7 +1273,7 @@ replacement = if [exists] then
       <ChildNodes>
         <Node ToolID="18">
           <GuiSettings Plugin="AlteryxBasePluginsGui.RegEx.RegEx">
-            <Position x="1278" y="738" />
+            <Position x="1422" y="58" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -1384,10 +1415,6 @@ replacement = if [exists] then
     </Connection>
     <Connection>
       <Origin ToolID="34" Connection="Output" />
-      <Destination ToolID="37" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="34" Connection="Output" />
       <Destination ToolID="44" Connection="Right" />
     </Connection>
     <Connection>
@@ -1396,15 +1423,7 @@ replacement = if [exists] then
     </Connection>
     <Connection>
       <Origin ToolID="34" Connection="Output" />
-      <Destination ToolID="52" Connection="Right" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="53" Connection="Output" />
-      <Destination ToolID="52" Connection="Left" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="11" Connection="Output" />
-      <Destination ToolID="15" Connection="Input" />
+      <Destination ToolID="56" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="42" Connection="Output" />
@@ -1427,12 +1446,12 @@ replacement = if [exists] then
       <Destination ToolID="49" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="47" Connection="Output" />
-      <Destination ToolID="51" Connection="Input" />
-    </Connection>
-    <Connection>
       <Origin ToolID="49" Connection="Output" />
       <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="58" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="52" Connection="Join" />
@@ -1441,6 +1460,22 @@ replacement = if [exists] then
     <Connection>
       <Origin ToolID="55" Connection="Output" />
       <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="37" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="52" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="58" Connection="Output" />
+      <Destination ToolID="52" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>
@@ -1589,9 +1624,10 @@ View using browse tool and send using email tool.</Description>
         <Tool ToolId="23" Selected="False" />
         <Tool ToolId="31" Selected="False" />
         <Tool ToolId="34" Selected="True" />
-        <Tool ToolId="43" Selected="False" />
         <Tool ToolId="37" Selected="True" />
+        <Tool ToolId="43" Selected="True" />
         <Tool ToolId="46" Selected="True" />
+        <Tool ToolId="53" Selected="True" />
         <Tool ToolId="55" Selected="True" />
       </Wiz_OpenOutputTools>
       <Wiz_OutputMessage />
