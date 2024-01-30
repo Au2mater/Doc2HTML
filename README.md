@@ -1,6 +1,5 @@
-# Doc2HTML
 
-<img src="icon.png" alt="Alt text" width="200" height="200">
+<img src="doc2html.png" alt="Alt DOC2HTML" width="300" >
 
 ## Table of Contents
 
