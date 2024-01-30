@@ -70,17 +70,6 @@ def render_template(template_file: str, csvfile: str, output: str = None):
         # catch exception
         return
 
-    # read the csv file into a dictionary
-    # with open(csvfile, "r", encoding="utf-8") as f:
-    #     columns = [c.strip() for c in f.readline().split(",")]
-    #     rows = []
-    #     for rownum , line in enumerate(f.readlines()):
-    #         row = {}
-    #         for i, cell in enumerate(line.split(",")):
-    #             row[columns[i]] = cell.strip()
-    #             row['rownum'] = rownum+1
-    #         rows.append(row)
-    # read using csv module
     with open(csvfile, "r", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
         rows = []

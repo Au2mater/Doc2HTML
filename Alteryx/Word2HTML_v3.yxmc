@@ -359,7 +359,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\AHMABA\AppData\Local\Temp\Engine_20356_645b0f6b52bacc43ae470e12b3f81737_\Engine_20356_8f910b2bafb4c344b2bb7f98f0cfe0f3~.yxdb</TempFile>
+          <TempFile>C:\Users\AHMABA\AppData\Local\Temp\Engine_22336_ccd1b671c4f44f4f9ccaabbf6753496d_\Engine_22336_3e2e3cec5b1df842acc2cd137ba844b9~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -383,7 +383,7 @@
     </Node>
     <Node ToolID="20">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="1782" y="282" />
+        <Position x="1986" y="282" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -426,7 +426,7 @@ This can vary from one machine to another</Text>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\AHMABA\AppData\Local\Temp\Engine_20356_645b0f6b52bacc43ae470e12b3f81737_\Engine_20356_d3237be1f9808a4188182b71e9dda640~.yxdb</TempFile>
+          <TempFile>C:\Users\AHMABA\AppData\Local\Temp\Engine_22336_ccd1b671c4f44f4f9ccaabbf6753496d_\Engine_22336_086d3d4aa8c8ed4ebeec206237b91323~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -595,7 +595,7 @@ This can vary from one machine to another</Text>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\AHMABA\AppData\Local\Temp\Engine_20356_645b0f6b52bacc43ae470e12b3f81737_\Engine_20356_0370bf99ccc75143bce2fafac3ff7b57~.yxdb</TempFile>
+          <TempFile>C:\Users\AHMABA\AppData\Local\Temp\Engine_22336_ccd1b671c4f44f4f9ccaabbf6753496d_\Engine_22336_847d221a3739ac4c849c0e3b865f57a3~.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -1152,7 +1152,7 @@ replacement = if [exists] then
         </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Script" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="__HTML__" size="1073741823" source="Report:Table:Basic:" type="V_WString" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -1181,12 +1181,12 @@ replacement = if [exists] then
         </Annotation>
         <MetaInfo connection="Left">
           <RecordInfo>
-            <Field name="Script" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="__HTML__" size="1073741823" source="Report:Table:Basic:" type="V_WString" />
           </RecordInfo>
         </MetaInfo>
         <MetaInfo connection="Join">
           <RecordInfo>
-            <Field name="Script" size="2147483647" source="TextInput:" type="V_String" />
+            <Field name="__HTML__" size="1073741823" source="Report:Table:Basic:" type="V_WString" />
             <Field name="1" source="TextInput:" type="Int32" />
           </RecordInfo>
         </MetaInfo>
@@ -1197,6 +1197,30 @@ replacement = if [exists] then
         </MetaInfo>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="55">
+      <GuiSettings>
+        <Position x="1746" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Ranges">-1</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="__HTML__" size="1073741823" source="Report:Table:Basic:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="SelectRecords.yxmc" />
     </Node>
     <Node ToolID="22">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
@@ -1296,11 +1320,11 @@ replacement = if [exists] then
     </Connection>
     <Connection>
       <Origin ToolID="13" Connection="Output" />
-      <Destination ToolID="20" Connection="Input" />
+      <Destination ToolID="53" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="13" Connection="Output" />
-      <Destination ToolID="53" Connection="Input" />
+      <Destination ToolID="55" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="14" Connection="Output" />
@@ -1413,6 +1437,10 @@ replacement = if [exists] then
     <Connection>
       <Origin ToolID="52" Connection="Join" />
       <Destination ToolID="43" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>
@@ -1564,6 +1592,7 @@ View using browse tool and send using email tool.</Description>
         <Tool ToolId="43" Selected="False" />
         <Tool ToolId="37" Selected="True" />
         <Tool ToolId="46" Selected="True" />
+        <Tool ToolId="55" Selected="True" />
       </Wiz_OpenOutputTools>
       <Wiz_OutputMessage />
       <Wiz_NoOutputFilesMessage />
