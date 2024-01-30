@@ -1,5 +1,4 @@
 ## TODO
-[ ] create no install zipapp with builtin python interpretor
 [ ] add option to specify csv separator
 [ ] add option to specify general encoding
 

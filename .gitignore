@@ -12,6 +12,11 @@ dist
 build
 *.tar.gz
 
+# dev related
+Pipfile
+Pipfile.lock
+Alteryx/
+
 # Lab folder
 lab/
 
