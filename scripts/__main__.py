@@ -5,6 +5,7 @@ from pathlib import Path
 import argparse
 import csv
 import html
+import unicodedata
 
 def validate_word_file(filepath: str):
     """check if filepath exists and is a valid word document"""
@@ -93,11 +94,13 @@ def render_template(template_file: str, csvfile: str, output: str = None):
     with open(template_file, "r", encoding="utf-8") as f:
         template = f.read()
     
-    # unescape html entities
-    
+    # unescape html entities to allow for " and ' in the template
     template = html.unescape(template)
-
-
+    # normalize unicode characters
+    # template = unicodedata.normalize("NFKC", template).encode("ascii", "ignore").decode("ascii")
+    # replace “” with " and ‘’ with '
+    template = template.replace("“", '"').replace("”", '"').replace("‘", "'").replace("’", "'")
+ 
     # render the html file with jinja2
     env = Environment(loader=FileSystemLoader("."))
     template = env.from_string(template)
