@@ -5,7 +5,6 @@ from pathlib import Path
 import argparse
 import csv
 import html
-import unicodedata
 
 def validate_word_file(filepath: str):
     """check if filepath exists and is a valid word document"""
@@ -29,6 +28,21 @@ def validate_html_file(filepath: str):
     if fileext not in [".html", ".htm"]:
         raise Exception("File is not an existing html document")
     return True
+
+
+def read_csv(filepath: str)->dict:
+    # read the csv file
+    with open(csvfile, "r", encoding="utf-8-sig") as f:
+        reader = csv.DictReader(f)
+        rows = []
+        for rownum, row in enumerate(reader):
+            # if rownum is a valid column name, use it as rownum
+            if "rownum" in row.keys():
+                row["rownum"] = row["rownum"]
+            else:
+                row["rownum"] = rownum + 1
+            rows.append(row)
+    return rows
 
 
 # %%
@@ -72,17 +86,9 @@ def render_template(template_file: str, csvfile: str, output: str = None):
     if not (validate_html_file(template_file) and validate_csv_file(csvfile)):
         # catch exception
         return
+    
+    rows = read_csv(csvfile)
 
-    with open(csvfile, "r", encoding="utf-8-sig") as f:
-        reader = csv.DictReader(f)
-        rows = []
-        for rownum, row in enumerate(reader):
-            # if rownum is a valid column name, use it as rownum
-            if "rownum" in row.keys():
-                row["rownum"] = row["rownum"]
-            else:
-                row["rownum"] = rownum + 1
-            rows.append(row)
     # print(rows)
     # create output directory if it does not exist
     if output is None:
@@ -96,8 +102,6 @@ def render_template(template_file: str, csvfile: str, output: str = None):
     
     # unescape html entities to allow for " and ' in the template
     template = html.unescape(template)
-    # normalize unicode characters
-    # template = unicodedata.normalize("NFKC", template).encode("ascii", "ignore").decode("ascii")
     # replace “” with " and ‘’ with '
     template = template.replace("“", '"').replace("”", '"').replace("‘", "'").replace("’", "'")
  
