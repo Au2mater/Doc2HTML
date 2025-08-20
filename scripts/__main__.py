@@ -119,76 +119,78 @@ def render_template(template_file: str, csvfile: str, output: str = None):
     return output
 
 
-# %%
+if __name__ == "__main__":
 
-# predefined arguments
-# Create the parser
-parser = argparse.ArgumentParser(
-    description="Convert word documents and templates to html."
-)
+    # %%
 
-# Add the arguments
-parser.add_argument("--wordfile", type=str, help="Path to word file")
-parser.add_argument(
-    "--htmlfile",
-    type=str,
-    help="(Optional) Path to output html file. Default to same directory as wordfile",
-    default=None,
-)
-parser.add_argument(
-    "--outputdir",
-    type=str,
-    help="(Optional) Path to output directory. Default to same directory as wordfile",
-    default=None,
-)
-parser.add_argument(
-    "--csvfile",
-    type=str,
-    help="(Optional) Path to csv file for word template rendering",
-    default=None,
-)
+    # predefined arguments
+    # Create the parser
+    parser = argparse.ArgumentParser(
+        description="Convert word documents and templates to html."
+    )
 
-if len(sys.argv) > 1:
-    args = parser.parse_args()
+    # Add the arguments
+    parser.add_argument("--wordfile", type=str, help="Path to word file")
+    parser.add_argument(
+        "--htmlfile",
+        type=str,
+        help="(Optional) Path to output html file. Default to same directory as wordfile",
+        default=None,
+    )
+    parser.add_argument(
+        "--outputdir",
+        type=str,
+        help="(Optional) Path to output directory. Default to same directory as wordfile",
+        default=None,
+    )
+    parser.add_argument(
+        "--csvfile",
+        type=str,
+        help="(Optional) Path to csv file for word template rendering",
+        default=None,
+    )
 
-    wordfile = args.wordfile
-    output = args.outputdir
-    csvfile = args.csvfile
-    htmlfile = args.htmlfile
+    if len(sys.argv) > 1:
+        args = parser.parse_args()
 
-    if not validate_word_file(wordfile):
-        print("not a path to a valid word document")
-        exit()
+        wordfile = args.wordfile
+        output = args.outputdir
+        csvfile = args.csvfile
+        htmlfile = args.htmlfile
 
-
-# cli manual input arguments
-else:
-    wordfile = None
-    htmlfile = None
-    csvfile = None
-    output = None
-    while wordfile is None:
-        print("path to wordfile")
-        wordfile = input()
         if not validate_word_file(wordfile):
             print("not a path to a valid word document")
+            exit()
 
-        print("[optional] select html output file name")
-        htmlfile = input()
-        if htmlfile == "":
-            htmlfile = None
 
-        print("[optional] select csv file name")
-        csvfile = input()
-        if csvfile == "":
-            csvfile = None
-
-# execute conversion
-if wordfile is not None:
-    if csvfile is not None:
-        template_file = doc2html(input=wordfile, output=htmlfile)
-        outputdir = render_template(
-            template_file=template_file, csvfile=csvfile, output=output
-        )
+    # cli manual input arguments
     else:
-        doc2html(wordfile, htmlfile)
+        wordfile = None
+        htmlfile = None
+        csvfile = None
+        output = None
+        while wordfile is None:
+            print("path to wordfile")
+            wordfile = input()
+            if not validate_word_file(wordfile):
+                print("not a path to a valid word document")
+
+            print("[optional] select html output file name")
+            htmlfile = input()
+            if htmlfile == "":
+                htmlfile = None
+
+            print("[optional] select csv file name")
+            csvfile = input()
+            if csvfile == "":
+                csvfile = None
+
+    # execute conversion
+    if wordfile is not None:
+        if csvfile is not None:
+            template_file = doc2html(input=wordfile, output=htmlfile)
+            outputdir = render_template(
+                template_file=template_file, csvfile=csvfile, output=output
+            )
+        else:
+            doc2html(wordfile, htmlfile)
