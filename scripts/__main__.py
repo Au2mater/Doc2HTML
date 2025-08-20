@@ -55,22 +55,24 @@ def doc2html(input: str, output: str = None):
     input: path to word document
     output: (optional) path to output html file. Default to same directory as input
     """
-    with open(input, "rb") as docx_file:
+    with open(input, "rb", ) as docx_file:
         result = mammoth.convert_to_html(docx_file)
+        html_string = result.value.replace('/&quot; \l &quot;/', '/#/')  # tilføjer 2025-08-20 som fix til tableau url læsningsfejl
     if output is not None:
         # ensure that output directory exists
         Path(output).parent.mkdir(parents=True, exist_ok=True)
         with open(output, "w", encoding="utf-8") as html_file:
-            html_file.write(result.value)
+            html_file.write(html_string)
             print(f"written to {output}")
     else:
         output = str(Path(input).parent / "output" / Path(input).stem) + ".html"
         # ensure that output directory exists
         Path(output).parent.mkdir(parents=True, exist_ok=True)
         # replace ” with " and ’ with '
-        # result.value = result.value.replace('”', '&rdquo;').replace('’', '&rsquo;')
+        # html_string = html_string.replace('”', '&rdquo;').replace('’', '&rsquo;')
         with open(output, "w", encoding="utf-8") as html_file:
-            html_file.write(result.value)
+            print(html_string) # TODO remove this line
+            html_file.write(html_string)
             print(f"converted html written to {output}")
     return output
 
